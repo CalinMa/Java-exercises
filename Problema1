@@ -1,3 +1,12 @@
+/*
+1. The local library needs our help! The date on which a book was to be returned and the date on which it was returned are given. 
+Calculate the amount of the fine (if applicable). The fine is calculated according to the following rules:
+• If the book is returned on the day it must be returned or earlier, the fine is 0 $.
+• If the book is returned after the day it must be returned, but in the same month, the fine is 5 $ * the number of days of delay.
+• If the book is returned after the month in which it was to be returned, but in the same year, the fine is 50 $ * the number of months of delay.
+• If the book is returned in another year, than the year in which it had to be returned, there is a fixed fine of 1000 $.
+*/
+
 import java.util.*;
 
 public class problema1 {
