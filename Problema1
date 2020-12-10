@@ -1,0 +1,58 @@
+import java.util.*;
+
+public class problema1 {
+	
+	public static void main (String[] args) {
+		
+		int yearYouMustReturn;
+		int monthYouMustReturn;
+		int dayYouMustReturn;
+		int yearYouReturned;
+		int monthYouReturned;
+		int dayYouReturned;
+		int ticket=0;
+		int monthsOfDelay=0;
+		
+		Scanner scan = new Scanner (System.in);
+		System.out.println("Please type the year month and day when the books must be returned: ");
+		yearYouMustReturn= scan.nextInt();
+		monthYouMustReturn= scan.nextInt();
+		dayYouMustReturn= scan.nextInt();
+		System.out.println("Please type the year month day when the books have been returned: ");
+		yearYouReturned= scan.nextInt();
+		monthYouReturned= scan.nextInt();
+		dayYouReturned= scan.nextInt();
+		
+		if (yearYouMustReturn >= yearYouReturned) {
+			
+			if (monthYouMustReturn >= monthYouReturned) {
+				if (dayYouMustReturn >= dayYouReturned) {
+					System.out.println("Ticket Zero $");
+				}
+			} else { ticket = (monthYouReturned - monthYouMustReturn ) * 50;
+					System.out.println("The ticket is = "+ticket+" $");			
+					}
+		}	else {
+			
+			if( yearYouMustReturn < yearYouReturned) {
+					monthsOfDelay = 12 - monthYouMustReturn + monthYouReturned;
+					if (monthsOfDelay > 11) {
+					System.out.println("The ticket is 1000$");
+				} 	else if (monthsOfDelay > 1){
+					ticket=monthsOfDelay*50;
+					System.out.println("The ticket is = "+ticket+" $");
+				} 	else  {
+					ticket= (30 - dayYouMustReturn + dayYouReturned) *5;
+					System.out.println("The ticket is = "+ticket+" $");
+				}				
+			} 				
+		}	
+	} 
+}
+
+ 
+
+
+
+
+
